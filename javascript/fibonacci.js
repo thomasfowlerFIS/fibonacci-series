@@ -1,5 +1,9 @@
-function fibonacci(num) {
-  // type your code here
+const fibonacci = (num) => {
+  const fibs = []
+  return [...Array(num).keys()].reduce((pf, cf) => {
+    fibs.push(pf)
+    return pf === 0 ? (pf + 1) : (pf + fibs[cf - 1])
+  }, 0)
 }
 
 if (require.main === module) {
